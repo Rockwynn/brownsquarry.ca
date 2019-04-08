@@ -1,0 +1,20 @@
+body {
+	background-image: url('https://bq.imgix.net/misc/header-bg2.png');
+	/*background: #fff;*/
+	color: $color_dark;
+	font-family: $font_serif;
+	font-size: 18px;
+}
+
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.block { display: block; }
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+li.bq-phone a.bq-phone, a.bq-phone {
+	color: #76AE0A;
+
+}

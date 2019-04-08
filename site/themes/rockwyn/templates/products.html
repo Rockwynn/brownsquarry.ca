@@ -1,0 +1,39 @@
+<section class="hero">
+	<div class="hero-background" style="background-image: url('{{ image_url}}');">
+		<div class="overlay"></div>
+		<header>
+			<h1>{{ title }}</h1>
+			<h2 class="bq-phone">We supply products and are glad to quote on installations as well. Budd Brown <br><br><a class="bq-phone" href="tel:+1-705-499-6277">705-499-6277</a></h2>
+
+		</header>
+		<div class="meta">
+			<div class="avatar">
+				{{ imgix:responsive_image_tag path="logos/bq-logo-circle-green.png" auto="format" w="48" h="48"}}
+				<!--<img src="{{ bq_avatar }}" class="img-circle" width="48" height="48">-->
+			</div>
+			<div class="name">
+				<h5 class="name">{{ owner_name }}</h5>
+				<h5 class="name">{{ author_name }}</h5>
+			</div>
+			<!--<div class="length">{{ content | read_time }} minute read</div>-->
+			<div class="date">
+				{{ date format="F j, Y" }}
+			</div>
+		</div>
+	</div>
+</section>
+<section class="container-fluid gallery">
+	<header>
+		<h1>{{ title }}</h1>
+		{{ content_raw wrap="h2" }}
+	</header>
+    <div class="tiles">
+        {{ collection:products }}
+        <a href="products/{{ slug }}" class="item">
+            <div class="image" style="background-image: url('{{ image_url }}');">
+                <h3 class="caption">{{ title }}</h3>
+            </div>
+        </a>
+        {{ /collection:products }}
+    </div>
+</section>

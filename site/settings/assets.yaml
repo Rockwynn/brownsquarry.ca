@@ -1,0 +1,7 @@
+image_manipulation_route: /assets
+image_manipulation_secure: false
+auto_crop: false
+image_manipulation_driver: imagick
+image_manipulation_cached: false
+thumbnail_max_width: 6000
+thumbnail_max_height: 6000

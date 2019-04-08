@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Another awesome Statamic site">
+    <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
+    <title>{{ title ensure_right=" / " }}{{ site_name }}</title>
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="{{ theme:css }}">
+    <link rel="icon" type="image/x-icon" href="{{ imgix:image_url path='logos/bq-logo-circle-green.png' auto='format'}}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,400italic,900|Lora:400,400italic,700,700italic" type="text/css" />
+    <!--<script src="/site/themes/rockwyn/js/elixir.min.js"></script>-->
+</head>
+
+<body class="section-{{ segment_1 or 'home' }}" >
+
+    {{ partial:nav }}
+
+    {{ template_content }}
+
+    <footer class="page">
+        <p class="copyright">&copy; {{ now format="Y" }} {{ author_name }}</p>
+        <p class="tribute"><a href="https://rockwynnwebdesign.ca">Designed by Rockwynn Web Design</a></p>
+        {{ if ! segment_1 }}
+        <div class="bq-counter">
+        <!-- Start of CuterCounter Code -->
+            <a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hit.php?id=13371&nd=5&style=27" border="0" alt="free counter"></a>
+        <!-- End of CuterCounter Code -->
+        </div>
+        {{ /if }}
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <script src="{{ theme:js }}"></script>
+
+</body>
+</html>
